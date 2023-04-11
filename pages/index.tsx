@@ -638,7 +638,7 @@ const Home: React.FC<HomeProps> = ({
       handleSend(currentMessage);
       setCurrentMessage(undefined);
     }
-  }, [currentMessage]);
+  }, [currentMessage, handleSend]);
 
   useEffect(() => {
     if (window.innerWidth < 640) {
@@ -650,7 +650,7 @@ const Home: React.FC<HomeProps> = ({
     if (apiKey) {
       fetchModels(apiKey);
     }
-  }, [apiKey]);
+  }, [apiKey, fetchModels]);
 
   // ON LOAD --------------------------------------------
 
