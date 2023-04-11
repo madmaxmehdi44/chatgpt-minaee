@@ -5,13 +5,12 @@ interface Props {
   className?: string;
 }
 
-
 export const Spinner: FC<Props> = ({ size = '1em', className="" }) => {
   return (
     <svg
       stroke="currentColor"
       fill="none"
-      strokeWidth="2"
+      strokeWidth="3"
       viewBox="0 0 24 24"
       strokeLinecap="round"
       strokeLinejoin="round"
