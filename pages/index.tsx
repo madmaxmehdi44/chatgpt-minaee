@@ -73,7 +73,7 @@ const Home: React.FC<HomeProps> = ({
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   const [prompts, setPrompts] = useState<Prompt[]>([]);
-  const [showPromptbar, setShowPromptbar] = useState<boolean>(true);
+  const [showPromptbar, setShowPromptbar] = useState<boolean>(false);
 
   // REFS ----------------------------------------------
 
@@ -482,7 +482,7 @@ const Home: React.FC<HomeProps> = ({
 
     const newConversation: Conversation = {
       id: uuidv4(),
-      name: `${t('New Conversation')}`,
+      name: `چت جدید`,// `${t('New Conversation')}`,
       messages: [],
       model: lastConversation?.model || {
         id: OpenAIModels[defaultModelId].id,
@@ -520,7 +520,7 @@ const Home: React.FC<HomeProps> = ({
     } else {
       setSelectedConversation({
         id: uuidv4(),
-        name: 'New conversation',
+        name: 'چت جدید', //'New conversation',
         messages: [],
         model: OpenAIModels[defaultModelId],
         prompt: DEFAULT_SYSTEM_PROMPT,
@@ -554,7 +554,7 @@ const Home: React.FC<HomeProps> = ({
 
     setSelectedConversation({
       id: uuidv4(),
-      name: 'New conversation',
+      name: 'چت جدید', //'New conversation',
       messages: [],
       model: OpenAIModels[defaultModelId],
       prompt: DEFAULT_SYSTEM_PROMPT,
@@ -735,11 +735,11 @@ const Home: React.FC<HomeProps> = ({
   return (
     <>
       <Head>
-        <title>Chatbot UI</title>
-        <meta name="description" content="ChatGPT but better." />
+        <title>MIFA UI</title>
+        <meta name="description" content="MIFA GPT better" />
         <meta
           name="viewport"
-          content="height=device-height ,width=device-width, initial-scale=1, user-scalable=no"
+          content="height=device-height ,width=device-width, initial-scale=1, user-scalable=no scalable=no"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

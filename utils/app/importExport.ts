@@ -58,7 +58,7 @@ export function cleanData(data: SupportedExportFormats): LatestExportFormat {
   }
 
 
-  throw new Error('Unsupported data format');
+  throw new Error('مشکل در قالب فایل داده ای');
 }
 
 function currentDate() {
@@ -97,7 +97,7 @@ export const exportData = () => {
   });
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
-  link.download = `chatbot_ui_history_${currentDate()}.json`;
+  link.download = `mifa_history_${currentDate()}.json`;
   link.href = url;
   link.style.display = 'none';
   document.body.appendChild(link);
